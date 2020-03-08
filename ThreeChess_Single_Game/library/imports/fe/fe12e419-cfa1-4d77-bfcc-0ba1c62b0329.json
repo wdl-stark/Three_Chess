@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "toolbar",
+    "texture": "90f2a2f6-cbe4-4fac-84a1-446c503568a3",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      20,
+      124
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      20,
+      124
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

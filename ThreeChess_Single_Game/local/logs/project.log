@@ -1,0 +1,70 @@
+2020-02-25T15:30:14.266Z - normal: Load ~/.CocosCreator/settings.json
+2020-02-25T15:30:14.314Z - normal: Initializing Asset Database
+2020-02-25T15:30:14.316Z - normal: checking language setting...
+2020-02-25T15:30:14.316Z - normal: Language: zh
+2020-02-25T15:30:14.853Z - success: preview server running at http://localhost:7456
+2020-02-25T15:30:14.902Z - success: protocol editor-framework registered
+2020-02-25T15:30:14.902Z - success: protocol app registered
+2020-02-25T15:30:14.902Z - success: protocol theme registered
+2020-02-25T15:30:14.902Z - success: protocol packages registered
+2020-02-25T15:30:14.902Z - success: protocol uuid registerred
+2020-02-25T15:30:14.902Z - success: protocol db registerred
+2020-02-25T15:30:14.902Z - success: protocol thumbnail registerred
+2020-02-25T15:30:14.903Z - success: protocol unpack registerred
+2020-02-25T15:30:14.903Z - success: protocol disable-commonjs registerred
+2020-02-25T15:30:15.019Z - normal: connected!
+2020-02-25T15:30:15.021Z - normal: Check project /Volumes/study/cocos_projects/MakeThreeChess
+2020-02-25T15:30:15.022Z - normal: Initializing project /Volumes/study/cocos_projects/MakeThreeChess
+2020-02-25T15:30:15.349Z - normal: Initializing Cocos2d
+2020-02-25T15:30:15.997Z - normal: Initializing engine extends
+2020-02-25T15:30:16.029Z - success: alipay-adapter loaded
+2020-02-25T15:30:16.040Z - success: asset-db-debugger loaded
+2020-02-25T15:30:16.041Z - success: baidu-adapter loaded
+2020-02-25T15:30:16.042Z - success: color-picker loaded
+2020-02-25T15:30:16.136Z - success: fb-audience-network loaded
+2020-02-25T15:30:16.174Z - success: fb-live-stream loaded
+2020-02-25T15:30:16.176Z - success: google-play-instant loaded
+2020-02-25T15:30:16.180Z - success: huawei-runtime loaded
+2020-02-25T15:30:16.366Z - success: cpk-publish loaded
+2020-02-25T15:30:16.367Z - success: jsb-adapter loaded
+2020-02-25T15:30:16.371Z - success: oppo-runtime loaded
+2020-02-25T15:30:16.382Z - success: package-manager loaded
+2020-02-25T15:30:16.474Z - success: qqplay-adapter loaded
+2020-02-25T15:30:16.476Z - success: runtime-dev-tools loaded
+2020-02-25T15:30:16.486Z - success: sdkbox loaded
+2020-02-25T15:30:16.495Z - success: tester loaded
+2020-02-25T15:30:16.503Z - success: ui-kit-preview-extra loaded
+2020-02-25T15:30:16.511Z - success: ui-kit-preview loaded
+2020-02-25T15:30:16.520Z - success: ui-kit loaded
+2020-02-25T15:30:16.524Z - success: vivo-runtime loaded
+2020-02-25T15:30:16.525Z - success: weapp-adapter loaded
+2020-02-25T15:30:16.526Z - success: xiaomi-adapter loaded
+2020-02-25T15:30:16.528Z - success: alipay-minigame loaded
+2020-02-25T15:30:16.575Z - success: assets loaded
+2020-02-25T15:30:16.584Z - success: builder loaded
+2020-02-25T15:30:16.792Z - success: cocos-services loaded
+2020-02-25T15:30:16.802Z - success: console loaded
+2020-02-25T15:30:16.832Z - success: fb-instant-games loaded
+2020-02-25T15:30:16.840Z - success: game-window loaded
+2020-02-25T15:30:16.842Z - success: google-instant-games loaded
+2020-02-25T15:30:16.851Z - success: hierarchy loaded
+2020-02-25T15:30:16.860Z - success: inspector loaded
+2020-02-25T15:30:16.861Z - success: keystore loaded
+2020-02-25T15:30:16.870Z - success: node-library loaded
+2020-02-25T15:30:16.871Z - success: package-asset loaded
+2020-02-25T15:30:16.872Z - success: preferences loaded
+2020-02-25T15:30:16.880Z - success: project-exporter loaded
+2020-02-25T15:30:16.889Z - success: project-importer loaded
+2020-02-25T15:30:16.900Z - success: project-settings loaded
+2020-02-25T15:30:16.910Z - success: scene loaded
+2020-02-25T15:30:16.911Z - success: simulator-debugger loaded
+2020-02-25T15:30:16.912Z - success: sprite-editor loaded
+2020-02-25T15:30:16.920Z - success: store loaded
+2020-02-25T15:30:16.932Z - success: timeline loaded
+2020-02-25T15:30:16.936Z - success: xiaomi-runtime loaded
+2020-02-25T15:30:16.943Z - success: prefab-creator loaded
+2020-02-25T15:30:17.904Z - normal: Loading packages
+2020-02-25T15:30:17.911Z - normal: Watching packages
+2020-02-25T15:30:18.006Z - normal: Run Application
+2020-02-25T15:30:18.512Z - info: Cocos Services load base data!
+2020-02-25T15:30:26.621Z - info: shutdown preview server

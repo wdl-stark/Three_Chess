@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "mig_game_4",
+    "texture": "cfbdc684-5198-4038-ad89-14906d1006a8",
+    "atlas": "",
+    "rect": [
+      1,
+      1,
+      62,
+      238
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      64,
+      240
+    ],
+    "capInsets": [
+      27,
+      32,
+      25,
+      30
+    ]
+  }
+}

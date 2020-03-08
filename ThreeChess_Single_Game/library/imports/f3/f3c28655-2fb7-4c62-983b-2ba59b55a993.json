@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "orange_highlight",
+    "texture": "1b055b85-325f-4cab-bfe6-2265d2fd04c1",
+    "atlas": "",
+    "rect": [
+      25,
+      24,
+      126,
+      129
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      176,
+      176
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

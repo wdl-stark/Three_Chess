@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "orange_removed",
+    "texture": "38bc0b8c-f0f2-4acb-9d0f-ad21fe813c10",
+    "atlas": "",
+    "rect": [
+      25,
+      24,
+      126,
+      129
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      176,
+      176
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "blue_highlight",
+    "texture": "eaae2a9e-45d0-4c47-8353-9029758b52d4",
+    "atlas": "",
+    "rect": [
+      25,
+      24,
+      126,
+      129
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      176,
+      176
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

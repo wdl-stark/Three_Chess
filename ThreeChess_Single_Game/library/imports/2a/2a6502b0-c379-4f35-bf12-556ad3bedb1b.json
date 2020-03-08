@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "button-hilite",
+    "texture": "4263659c-84f2-4f50-af60-b85b7e5a722e",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      116,
+      32
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      116,
+      32
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

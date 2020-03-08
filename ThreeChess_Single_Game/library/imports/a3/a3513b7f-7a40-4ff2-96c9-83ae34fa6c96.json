@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "blue_removed",
+    "texture": "d568afab-a598-4e8a-912d-5ce7cd75361c",
+    "atlas": "",
+    "rect": [
+      25,
+      24,
+      126,
+      129
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      176,
+      176
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
