@@ -80,7 +80,6 @@ cc.Class({
     // onLoad () {},
 
     start () {
-        this.Board.on(cc.Node.EventType.TOUCH_START, this.onTouchBoard, this);
         this.Board.on(cc.Node.EventType.TOUCH_END, this.onTouchEnd, this);
         window.GameController = this;
         window.MessageBoxPref = this.MessageBoxPref;
@@ -143,9 +142,7 @@ cc.Class({
         // end 
         websocket.send_object(req_data); 
     },
-    test(){
-        MessageBox.show("赢了",MessageBox.OK)
-    },
+    
     seat_turn_to_player(svr_seatid)
     {
         if (this.svr_seatid == svr_seatid) {
@@ -171,6 +168,7 @@ cc.Class({
             return;
         }
         this.svr_seatid = cmd[3];
+        this.table_no = cmd[4];
         //本方座位要显示出来
         this.seat_a.active = true;
         this.seat_a.getChildByName("chess").getComponent(cc.Sprite).spriteFrame = this.ChessSprite[this.svr_seatid];
@@ -512,12 +510,6 @@ cc.Class({
         return pos;
     },
    
-    onTouchBoard(event){
-        if(this.GameState == CommonDefine.GameStateEnum.None)
-        {
-            return;
-        }
-    },
     onTouchEnd(event)
     {
         if(this.GameState != CommonDefine.GameStateEnum.DropChess && 
@@ -545,9 +537,10 @@ cc.Class({
                 let req_data = {
                     0:THREE_CHESS_SERVICE,
                     1:CommonDefine.CMDTypeEnum.PUT_CHESS,
-                    2:CommonDefine.GameStateEnum.DropChess,
-                    3:pt.x,
-                    4:pt.y,
+                    2:this.table_no,
+                    3:CommonDefine.GameStateEnum.DropChess,
+                    4:pt.x,
+                    5:pt.y,
                 };
                 console.log("send dropchess point.x=",pt.x,",point.y=",pt.y);
                 websocket.send_object(req_data); 
@@ -568,9 +561,10 @@ cc.Class({
                     let req_data = {
                         0:THREE_CHESS_SERVICE,
                         1:CommonDefine.CMDTypeEnum.PUT_CHESS,
-                        2:CommonDefine.GameStateEnum.PressChess,
-                        3:pt2.x,
-                        4:pt2.y,
+                        2:this.table_no,
+                        3:CommonDefine.GameStateEnum.PressChess,
+                        4:pt2.x,
+                        5:pt2.y,
                     };
                     websocket.send_object(req_data); 
                 }
@@ -590,12 +584,13 @@ cc.Class({
                 let req_data = {
                     0:THREE_CHESS_SERVICE,
                     1:CommonDefine.CMDTypeEnum.PUT_CHESS,
-                    2:CommonDefine.GameStateEnum.MoveChess,
-                    3:CommonDefine.MoveStepEnum.DO_MOVE,
-                    4:this.CurrChess.Point.x,
-                    5:this.CurrChess.Point.y,
-                    6:to_point.x,
-                    7:to_point.y,
+                    2:this.table_no,
+                    3:CommonDefine.GameStateEnum.MoveChess,
+                    4:CommonDefine.MoveStepEnum.DO_MOVE,
+                    5:this.CurrChess.Point.x,
+                    6:this.CurrChess.Point.y,
+                    7:to_point.x,
+                    8:to_point.y,
                 };
                 websocket.send_object(req_data); 
                 return;
@@ -607,10 +602,11 @@ cc.Class({
         let req_data = {
             0:THREE_CHESS_SERVICE,
             1:CommonDefine.CMDTypeEnum.PUT_CHESS,
-            2:CommonDefine.GameStateEnum.MoveChess,
-            3:CommonDefine.MoveStepEnum.SELECT_CHESS,
-            4:point.x,
-            5:point.y,
+            2:this.table_no,
+            3:CommonDefine.GameStateEnum.MoveChess,
+            4:CommonDefine.MoveStepEnum.SELECT_CHESS,
+            5:point.x,
+            6:point.y,
         };
         websocket.send_object(req_data); 
     },
@@ -683,21 +679,7 @@ cc.Class({
         });
     },
     
-    IsBoardFull()
-    {
-        for(let i=0;i<this.ChessPoints.length;i++)
-        {
-            for(let j=0;j<this.ChessPoints[i].length;j++)
-            {
-                let ptValue = this.ChessPoints[i][j];
-                if(ptValue == 1)
-                {
-                    return false;
-                }
-            }
-        }
-        return true;
-    },
+    
     EatChess(chessNode){
         if(this.GameState != CommonDefine.GameStateEnum.EatChess)
         {
@@ -709,45 +691,16 @@ cc.Class({
             let req_data = {
                 0:THREE_CHESS_SERVICE,
                 1:CommonDefine.CMDTypeEnum.PUT_CHESS,
-                2:CommonDefine.GameStateEnum.EatChess,
-                3:point.x,
-                4:point.y,
+                2:this.table_no,
+                3:CommonDefine.GameStateEnum.EatChess,
+                4:point.x,
+                5:point.y,
             };
             websocket.send_object(req_data);   
         }
         return;
     },
-    JudgeWin()
-    {
-        let blackCount = 0;
-        let wihteCount = 0;
-        this.ChessNodes.forEach(node=>{
-            let chess = node.getComponent('Chess');
-            if(chess.IsBlack){
-                blackCount++;
-            }else{
-                wihteCount++
-            }
-        });
-        let status = WinOrLoseEnum.NotEndYet;
-        if(blackCount <= 2)
-        {
-            let msg = "橙色方赢了";
-            MessageBox.show(msg,MessageBox.OK)
-            status = WinOrLoseEnum.WhiteWin;
-        }
-        else if(wihteCount <= 2)
-        {
-            let msg = "蓝色方赢了";
-            MessageBox.show(msg,MessageBox.OK)
-            status = WinOrLoseEnum.BlackWin;
-        }
-        if(status != WinOrLoseEnum.NotEndYet)
-        {
-            this.GameState = CommonDefine.GameStateEnum.GameEnd;
-        }
-        return status;
-    },
+    
     ShowMessage(msg)
     {
         //this.Notice.string = msg;

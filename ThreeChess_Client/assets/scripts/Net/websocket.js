@@ -77,7 +77,7 @@ var websocket = {
     },
 }
 
-websocket.connect("ws://192.168.0.100:8003/ws");
+websocket.connect("ws://192.168.0.103:8003/ws");
 console.log("connect to server......");
 module.exports = websocket;
 
